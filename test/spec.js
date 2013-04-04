@@ -64,19 +64,19 @@ describe("fizzbuzz", function() {
     var fb = require('../lib/challenges/fizzbuzz');
 
     it('should return "Fizz" when number mod 3 == 0', function () {
-        assert.equal(fb('fizzbuzz\n81'), 'Fizz');
+        assert.equal(fb(['81']), 'Fizz');
     });
 
     it('should return "Buzz" when number mod 5 == 0', function () {
-        assert.equal(fb('fizzbuzz\n10'), 'Buzz');
+        assert.equal(fb(['10']), 'Buzz');
     });
 
     it('should return "FizzBuzz" when number mod 15 == 0', function () {
-        assert.equal(fb('fizzbuzz\n60'), 'FizzBuzz');
+        assert.equal(fb(['60']), 'FizzBuzz');
     });
 
     it('should return the number when not divisible by 5 nor 3', function () {
-        assert.equal(fb('fizzbuzz\n11'), '11');
+        assert.equal(fb(['11']), '11');
     });
 });
 
