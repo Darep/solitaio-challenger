@@ -153,10 +153,10 @@ describe('sort', function () {
     var sort = require('../lib/challenges/sort');
 
     it('should sort a list of positive number', function () {
-        assert.equal(sort('sort\n6\n1\n7\n35\n5'), '1, 5, 6, 7, 35');
+        assert.equal(sort(['6', '1', '7', '35', '5']), '1, 5, 6, 7, 35');
     });
 
     it('should sort a list of positive and negative numbers', function () {
-        assert.equal(sort('sort\n76\n-94\n78\n23\n-9\n17\n82\n-32\n83\n71'), '-94, -32, -9, 17, 23, 71, 76, 78, 82, 83');
+        assert.equal(sort(['76', '-94', '78','23','-9','17','82','-32','83','71']), '-94, -32, -9, 17, 23, 71, 76, 78, 82, 83');
     });
 });
