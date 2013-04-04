@@ -101,14 +101,14 @@ describe('caesar-cipher', function () {
 
     it('should rotate string by 3 when asked', function () {
         assert.equal(
-            caesar('caesar-cipher\n3\nencrypt this text with caesar cipher (rot-n) with n of 3'),
+            caesar(['3', 'encrypt this text with caesar cipher (rot-n) with n of 3']),
             'hqfuvsw wklv whuw zlwk fdhvdu flskhu (urw-q) zlwk q ri 3'
         );
     });
 
     xit('should rotate string by 11 when asked', function () {
         assert.equal(
-            caesar('caesar-cipher\n11\nencrypt this text with caesar cipher (rot-n) with n of 11'),
+            caesar(['11', 'encrypt this text with caesar cipher (rot-n) with n of 11']),
             'pyncjae estd epie htes nlpdlc ntaspc (cze-y) htes y zq 11'
         );
     });
