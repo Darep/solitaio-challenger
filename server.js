@@ -1,11 +1,8 @@
 var http = require('http');
 var parseChallenge = require('./lib/challenge-parser');
 
-var dump = function (obj) {
-    console.log(JSON.stringify(obj, null, 2));
-};
-
 module.exports = http.Server(function (request, response) {
+
     var requestBody = '';
 
     // Get all the data
