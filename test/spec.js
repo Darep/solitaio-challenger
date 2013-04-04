@@ -118,19 +118,19 @@ describe('palindrome', function () {
     var palindrome = require('../lib/challenges/palindrome');
 
     it('should return "true" when string is palindrome', function () {
-        assert.equal(palindrome('palindrome\nsaippuakauppias'), 'true');
+        assert.equal(palindrome(['saippuakauppias']), 'true');
     });
 
     it('should return "false" when string is not a palindrome', function () {
-        assert.equal(palindrome('palindrome\nYli satasella!'), 'false');
+        assert.equal(palindrome(['Yli satasella!']), 'false');
     });
 
     it('should return "true" when string is a palindrome, but has special characters', function () {
-        assert.equal(palindrome('palindrome\nAlle satasella!'), 'true');
+        assert.equal(palindrome(['Alle satasella!']), 'true');
     });
 
     it('should return "true" for a complex palindrome', function () {
-        assert.equal(palindrome('palindrome\nTilaa tropit, ehosta kaaraa, katso heti portaalit!'), 'true');
+        assert.equal(palindrome(['Tilaa tropit, ehosta kaaraa, katso heti portaalit!']), 'true');
     })
 });
 
