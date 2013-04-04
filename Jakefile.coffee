@@ -1,4 +1,10 @@
 
+desc 'Run test watcher'
+task 'test', ->
+    jake.exec ['mocha test/'], { stdout: true}, () ->
+        complete
+
+
 desc 'Deploy to production'
 task 'deploy', ->
     console.log '-----> Deploying...'
