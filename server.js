@@ -26,6 +26,13 @@ module.exports = http.Server(function (request, response) {
         var answerer = require('./lib/challenges/' + challenge + '.js');
         var result = answerer(requestBody);
 
+        if (!result) {
+            response.end('I don\'t understand :(');
+            return;
+        }
+
+        result = result.toString();
+
         response.writeHead(200, { 'Content-Type': 'text/plain' });
         response.end(result);
     });
