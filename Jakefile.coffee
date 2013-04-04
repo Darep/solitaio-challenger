@@ -1,12 +1,13 @@
+
 desc 'Deploy to production'
 task 'deploy', ->
-    console.log '-----> Deploying...' ;
+    console.log '-----> Deploying...'
 
     cmds = [
-        //'git ci -m "lol"',
-        //'git push',
-        'cd ../prod',
-        'pwd'
+        #'git add .',
+        #'git ci',
+        #'git push',
+        'cd ~/Sites/prod && git pull && npm install'
     ]
 
     jake.exec cmds, { printStdOut: true }, () ->
@@ -14,5 +15,4 @@ task 'deploy', ->
         complete
 
 
-task 'default', ->
-    jake.Task['deploy'].invoke
+task 'default', ['deploy']
