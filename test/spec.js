@@ -138,12 +138,12 @@ describe("nth-word", function() {
     var nthWord = require('../lib/challenges/nth-word');
 
     it('should find second word', function () {
-        assert.equal(nthWord('nth-word\n2\nLorem ipsum dolor sit'), 'ipsum');
+        assert.equal(nthWord(['2', 'Lorem ipsum dolor sit']), 'ipsum');
     });
 
     it('should find 68th word', function () {
         assert.equal(
-            nthWord('nth-word\n68\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\nFusce ut lacus enim, vitae bibendum magna. Maecenas et sem\neu sapien accumsan vehicula. Ut vel fringilla elit. Nam\ndolor sapien, scelerisque quis molestie at, faucibus a nisi.\nDonec orci augue, eleifend vel accumsan id, aliquet quis\nnibh. Integer suscipit sollicitudin orci nec pharetra.\nPhasellus vel neque felis. Donec bibendum nisi a nulla\ntempor placerat. Aliquam venenatis fringilla accumsan. Nunc\nsagittis vitae felis fermentum ornare. Nunc id risus nunc.\nCurabitur rhoncus, leo id fermentum posuere, felis ante\npellentesque elit, sit amet pretium libero mauris eu. Fusce\nimperdiet purus quis leo commodo nec feugiat diam pretium.\nMauris ac neque ut nunc vehicula varius.'),
+            nthWord(['68', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nFusce ut lacus enim, vitae bibendum magna. Maecenas et sem\neu sapien accumsan vehicula. Ut vel fringilla elit. Nam\ndolor sapien, scelerisque quis molestie at, faucibus a nisi.\nDonec orci augue, eleifend vel accumsan id, aliquet quis\nnibh. Integer suscipit sollicitudin orci nec pharetra.\nPhasellus vel neque felis. Donec bibendum nisi a nulla\ntempor placerat. Aliquam venenatis fringilla accumsan. Nunc\nsagittis vitae felis fermentum ornare. Nunc id risus nunc.\nCurabitur rhoncus, leo id fermentum posuere, felis ante\npellentesque elit, sit amet pretium libero mauris eu. Fusce\nimperdiet purus quis leo commodo nec feugiat diam pretium.\nMauris ac neque ut nunc vehicula varius.']),
             'Nunc'
         );
     });
