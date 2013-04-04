@@ -23,8 +23,12 @@ describe('ping', function () {
 describe("say-hello", function() {
     var sayHello = require('../lib/challenges/say-hello');
 
-    it('should say hello to whoever it is', function () {
+    it('should say hello to Solita', function () {
         assert.equal(sayHello(['Solita']), 'Hello Solita');
+    })
+
+    it('should say hello to more than one people', function () {
+        assert.equal(sayHello(['Solita', 'poop']), 'Hello Solita\npoop');
     })
 });
 
@@ -143,7 +147,7 @@ describe("nth-word", function() {
 
     it('should find 68th word', function () {
         assert.equal(
-            nthWord(['68', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nFusce ut lacus enim, vitae bibendum magna. Maecenas et sem\neu sapien accumsan vehicula. Ut vel fringilla elit. Nam\ndolor sapien, scelerisque quis molestie at, faucibus a nisi.\nDonec orci augue, eleifend vel accumsan id, aliquet quis\nnibh. Integer suscipit sollicitudin orci nec pharetra.\nPhasellus vel neque felis. Donec bibendum nisi a nulla\ntempor placerat. Aliquam venenatis fringilla accumsan. Nunc\nsagittis vitae felis fermentum ornare. Nunc id risus nunc.\nCurabitur rhoncus, leo id fermentum posuere, felis ante\npellentesque elit, sit amet pretium libero mauris eu. Fusce\nimperdiet purus quis leo commodo nec feugiat diam pretium.\nMauris ac neque ut nunc vehicula varius.']),
+            nthWord(['68', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.','Fusce ut lacus enim, vitae bibendum magna. Maecenas et sem','eu sapien accumsan vehicula. Ut vel fringilla elit. Nam','dolor sapien, scelerisque quis molestie at, faucibus a nisi.','Donec orci augue, eleifend vel accumsan id, aliquet quis','nibh. Integer suscipit sollicitudin orci nec pharetra.','Phasellus vel neque felis. Donec bibendum nisi a nulla','tempor placerat. Aliquam venenatis fringilla accumsan. Nunc','sagittis vitae felis fermentum ornare. Nunc id risus nunc.','Curabitur rhoncus, leo id fermentum posuere, felis ante','pellentesque elit, sit amet pretium libero mauris eu. Fusce','imperdiet purus quis leo commodo nec feugiat diam pretium.','Mauris ac neque ut nunc vehicula varius.']),
             'Nunc'
         );
     });
@@ -160,3 +164,11 @@ describe('sort', function () {
         assert.equal(sort(['76', '-94', '78','23','-9','17','82','-32','83','71']), '-94, -32, -9, 17, 23, 71, 76, 78, 82, 83');
     });
 });
+
+describe('iban', function () {
+    var iban = require('../lib/challenges/iban');
+
+    it('should return correct checksum for an IBAN', function () {
+
+    });
+})
