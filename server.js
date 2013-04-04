@@ -23,10 +23,10 @@ module.exports = http.Server(function (request, response) {
             return;
         }
 
-        var answerer = require('./lib/challenges/' + challenge + '.js');
+        var answerer = require('./lib/challenges/' + challenge);
         var result = answerer(requestBody);
 
-        if (!result) {
+        if (result === undefined) {
             response.end('I don\'t understand :(');
             return;
         }
